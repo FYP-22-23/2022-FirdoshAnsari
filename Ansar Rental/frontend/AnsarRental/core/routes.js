@@ -1,0 +1,5 @@
+export const onboardingRoute = '/'
+export const homeRoute = '/home'
+export const loginRoute = '/login'
+export const forgotPasswordRoute = '/forgotPassword'
+export const changePasswordModalRoute = '/change-password'
