@@ -15,3 +15,10 @@ class OwnerSerializer(serializers.ModelSerializer):
 
     def get_joined(self, obj):
         return obj.created_at.strftime('%Y-%m-%d')
+
+    # def save(self, **kwargs):
+    #     # kwargs['groups'] = []
+    #     print(kwargs)
+    #     # kwargs['user_permissions'] = []
+    #     return super().save(**kwargs)
+

@@ -1,6 +1,5 @@
 // Soft UI Dashboard React layouts
 import Dashboard from "layouts/dashboard";
-import LandlordsOrTenants from "layouts/landlordsOrTenants";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignOut from "layouts/authentication/sign-out";
@@ -11,8 +10,12 @@ import Office from "examples/Icons/Office";
 import Document from "examples/Icons/Document";
 import SpaceShip from "examples/Icons/SpaceShip";
 import CustomerSupport from "examples/Icons/CustomerSupport";
+import CreditCard from "examples/Icons/CreditCard"
+import Landlords from "layouts/landlords";
+import Tenants from "layouts/tenants"
+import GenerateBill from "layouts/generateBill";
 
-const routes = [
+const getRoutes = (isAdmin) => [
   {
     type: "collapse",
     name: "Dashboard",
@@ -25,15 +28,25 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Landlords / Tenants",
-    key: "landlordsOrTenants",
-    route: "/landlordsOrTenants",
+    name: isAdmin ? "Landlords" : "Tenants",
+    key: isAdmin ? "landlords" : "tenants",
+    route: isAdmin ? "/landlords" : "/tenants",
     icon: <Office size="12px" />,
-    component: LandlordsOrTenants,
+    component: isAdmin ? Landlords : Tenants,
     noCollapse: true,
     protected: true,
   },
   { type: "title", title: "Account Pages", key: "account-pages" },
+  {
+    type: "collapse",
+    name: "Generate Bill",
+    key: "generate-bill",
+    route: "/generate-bill",
+    icon: <CreditCard size="12px" />,
+    component: GenerateBill,
+    noCollapse: true,
+    protected: true,
+  },
   {
     type: "collapse",
     name: "Profile",
@@ -64,4 +77,4 @@ const routes = [
   },
 ];
 
-export default routes;
+export default getRoutes;

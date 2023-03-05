@@ -1,4 +1,4 @@
-import axios, {authAxios} from "./index";
+import axios, { authAxios } from "./index";
 
 class AuthApi {
   static Login = (data) => {
@@ -10,10 +10,8 @@ class AuthApi {
   };
 
   static Logout = (data) => {
-    return axios.post(`${base}/logout`, data, { headers: { Authorization: `${data.token}` } });
+    return axios.post(`auth/logout`, data, { headers: { Authorization: `${data.token}` } });
   };
 }
-
-let base = "users";
 
 export default AuthApi;

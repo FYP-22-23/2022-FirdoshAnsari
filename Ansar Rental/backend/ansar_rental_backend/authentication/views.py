@@ -7,18 +7,33 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from authentication.backends import OwnerBackend
 from authentication.owner.serializers import OwnerSerializer
 from authentication.tenant.serializers import TenantSerializer
+from rest_framework_simplejwt.tokens import AccessToken
+from .owner.models import Owner
+import json
 
 
 class SignupView(CreateAPIView):
-    authentication_classes = [JWTAuthentication, OwnerBackend]
-    authentication_backends = [JWTAuthentication, OwnerBackend]
+    authentication_classes = []
+    authentication_backends = []
     permission_classes = ()
 
     def post(self, request, *args, **kwargs):
         try:
             auth_user = request.user
+            print(auth_user)
             if not auth_user.is_authenticated:
-                return Response({'detail': 'Invalid or expired token.'}, status=status.HTTP_401_UNAUTHORIZED)
+                # authentication_classes = [OwnerBackend, ]
+                # authentication_backends = [OwnerBackend, ]
+                access = AccessToken(request.headers.get('Authorization').replace('Bearer ', ''))
+                token = str(access.get_token_backend)
+                i1 = token.find('{')
+                i2 = token.find('}')
+                string = token[i1:i2+1].replace("'", '"')
+                new_dict = json.loads(string)
+                user_id = new_dict['user_id']
+                auth_user = User.objects.filter(pk=user_id).first()
+                if not auth_user:
+                    auth_user = Owner.objects.filter(pk=user_id).first()
 
             if isinstance(auth_user, User):  # if admin
                 self.serializer_class = OwnerSerializer
@@ -29,16 +44,19 @@ class SignupView(CreateAPIView):
                 serializer.validated_data['is_active'] = False
                 serializer.validated_data['is_admin'] = False
                 serializer.validated_data['groups'] = []
+                serializer.validated_data['is_active'] = True
                 serializer.validated_data['user_permissions'] = []
-                print(serializer.validated_data)
                 serializer.save()
                 return Response({'success': True, 'message': 'created'}, status=status.HTTP_201_CREATED)
 
-            if auth_user.is_landlord:
+            if isinstance(auth_user, Owner):
                 self.serializer_class = TenantSerializer
                 serializer = self.get_serializer(data=request.data)
                 serializer.is_valid(raise_exception=True)
                 serializer.validated_data['is_tenant'] = True
+                serializer.validated_data['groups'] = []
+                serializer.validated_data['is_active'] = True
+                serializer.validated_data['user_permissions'] = []
                 serializer.save()
                 return Response({'success': True, 'message': 'created'}, status=status.HTTP_201_CREATED)
 
