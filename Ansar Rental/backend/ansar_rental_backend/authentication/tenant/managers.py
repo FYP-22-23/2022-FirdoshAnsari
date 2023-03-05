@@ -9,8 +9,6 @@ class TenantManager(BaseUserManager):
         raise Exception('You cannot create an admin')
 
     def create_tenant(self, email, password=None, **extra_fields):
-        # del extra_fields['groups']
-        # del extra_fields['user_permissions']
         groups = extra_fields.pop('groups')
         permissions = extra_fields.pop('user_permissions')
         user = self.model(email=self.normalize_email(email), **extra_fields)

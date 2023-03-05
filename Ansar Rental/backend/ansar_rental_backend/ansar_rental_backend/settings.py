@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'authentication.tenant',
     'authentication.owner',
     'landlord',
+    'notifications',
+    'bills',
+    'payments',
+    'invoices',
+    # 'tenant',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +68,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # Load the default ones
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:3001"]
 
 TEMPLATES = [
     {
@@ -151,7 +156,7 @@ REST_FRAMEWORK = {
         # 'authentication.backends.OwnerBackend',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
     ]
 }
 

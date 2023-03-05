@@ -20,5 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
     path('landlord/', include('landlord.urls')),
+    path('tenant/', include('tenant.urls')),
+    path('notification/', include('notifications.urls')),
+    path('payment/', include('payments.urls')),
+    path('bill/', include('bills.urls')),
     # path('auth/', include('authentication.urls'))
 ]

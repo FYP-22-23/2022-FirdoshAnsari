@@ -26,6 +26,9 @@ import { useSoftUIController } from "context";
 
 import { ProtectedRoute } from "./ProtectedRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { useAuth } from "auth-context/auth.context";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const queryClient = new QueryClient()
@@ -90,21 +93,25 @@ export default function App() {
     </SuiBox>
   );
 
+  const { user } = useAuth()
+  const isAdmin = user === null ? false : user.is_admin
+
   return (
     <QueryClientProvider client={queryClient}>
+      <ToastContainer/>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {layout === "dashboard" && (
             <>
-              <Sidenav routes={routes} />
+              <Sidenav routes={routes(isAdmin)} />
               <Configurator />
               {configsButton}
             </>
           )}
           {layout === "vr" && <Configurator />}
           <Switch>
-            {getRoutes(routes)}
+            {getRoutes(routes(isAdmin))}
             <Redirect from="*" to="/dashboard" />
           </Switch>
         </ThemeProvider>

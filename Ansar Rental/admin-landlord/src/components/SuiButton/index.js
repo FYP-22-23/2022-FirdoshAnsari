@@ -64,4 +64,6 @@ SuiButton.propTypes = {
   customClass: PropTypes.string,
 };
 
+SuiButton.displayName = "button"
+
 export default SuiButton;

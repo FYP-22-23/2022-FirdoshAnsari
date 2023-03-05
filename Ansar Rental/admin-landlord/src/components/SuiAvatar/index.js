@@ -68,4 +68,6 @@ SuiAvatar.propTypes = {
   customClass: PropTypes.string,
 };
 
+SuiAvatar.displayName = "avatar"
+
 export default SuiAvatar;

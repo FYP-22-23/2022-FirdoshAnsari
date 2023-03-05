@@ -11,7 +11,6 @@ class OwnerManager(BaseUserManager):
     def create_owner(self, email, password=None, **extra_fields):
         groups = extra_fields.pop('groups')
         permissions = extra_fields.pop('user_permissions')
-
         user = self.model(email=self.normalize_email(email), **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
