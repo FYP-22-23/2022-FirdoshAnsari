@@ -14,6 +14,9 @@ import CreditCard from "examples/Icons/CreditCard"
 import Landlords from "layouts/landlords";
 import Tenants from "layouts/tenants"
 import GenerateBill from "layouts/generateBill";
+import {Payments, Receipt} from "@mui/icons-material";
+import {Payment} from "./layouts/payment";
+import {BillHistory} from "./layouts/billHistory";
 
 const getRoutes = (isAdmin) => [
   {
@@ -28,6 +31,36 @@ const getRoutes = (isAdmin) => [
   },
   {
     type: "collapse",
+    name: "Generate Bill",
+    key: "generate-bill",
+    route: "/generate-bill",
+    icon: <CreditCard size="12px" />,
+    component: GenerateBill,
+    noCollapse: true,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Payment",
+    key: "payment",
+    route: "/payment",
+    icon: <Payments size="12px" />,
+    component: Payment,
+    noCollapse: true,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Bill History",
+    key: "bill-history",
+    route: "/bill-history",
+    icon: <Receipt size="12px" />,
+    component: BillHistory,
+    noCollapse: true,
+    protected: true,
+  },
+  {
+    type: "collapse",
     name: isAdmin ? "Landlords" : "Tenants",
     key: isAdmin ? "landlords" : "tenants",
     route: isAdmin ? "/landlords" : "/tenants",
@@ -37,16 +70,6 @@ const getRoutes = (isAdmin) => [
     protected: true,
   },
   { type: "title", title: "Account Pages", key: "account-pages" },
-  {
-    type: "collapse",
-    name: "Generate Bill",
-    key: "generate-bill",
-    route: "/generate-bill",
-    icon: <CreditCard size="12px" />,
-    component: GenerateBill,
-    noCollapse: true,
-    protected: true,
-  },
   {
     type: "collapse",
     name: "Profile",

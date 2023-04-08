@@ -5,6 +5,10 @@ export class LandlordApi {
     return authAxios.get(`landlord/`);
   }
 
+  static getTenantsForRoom() {
+    return axios.get(`landlord/tenants_for_room/`)
+  }
+
   static update(id, body) {
     return authAxios.put(`landlord/${id}/`, body)
   }
@@ -18,7 +22,6 @@ export class LandlordApi {
   }
 
   static generateBill(body) {
-    console.log(body)
     return axios.post('bill/', body)
   }
 }

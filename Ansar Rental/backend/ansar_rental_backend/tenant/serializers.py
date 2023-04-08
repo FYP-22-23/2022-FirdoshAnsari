@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from authentication.tenant.models import Tenant
+from rest_framework_simplejwt.tokens import AccessToken
 
 
 class TenantSerializer(serializers.ModelSerializer):
@@ -8,8 +9,11 @@ class TenantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tenant
-        fields = ['username', 'monthly_room_rent', 'monthly_water_rent', 'room_number', 'guardian_name', 'guardian_contact_number', 
-                  'starting_electricity_units', 'number_of_tenants', 'starting_date', 'joined', 'id', 'email', 'id', 'fcm_token']
+        fields = ['username', 'monthly_room_rent', 'monthly_water_rent', 'room_number', 'guardian_name',
+                  'guardian_contact_number',
+                  'starting_electricity_units', 'number_of_tenants', 'starting_date', 'joined', 'id', 'email', 'id',
+                  'fcm_token', 'first_name', 'last_name',
+                  'number_of_tenants', 'notes', 'date_of_birth', 'contact', 'address']
 
     def get_id(self, obj):
         return obj.pk

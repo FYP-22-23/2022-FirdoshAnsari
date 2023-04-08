@@ -28,7 +28,6 @@ function Author({ name, email }) {
 }
 
 export const AuthorTable = (props) => {
-  console.log(props.fetchKey)
   const query = useQuery(props.fetchKey, () => LandlordApi.getAll())
   // const [open, setOpen] = useState(false)
   const [openEditId, setOpenEditId] = useState(null)

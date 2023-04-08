@@ -24,5 +24,4 @@ urlpatterns = [
     path('notification/', include('notifications.urls')),
     path('payment/', include('payments.urls')),
     path('bill/', include('bills.urls')),
-    # path('auth/', include('authentication.urls'))
 ]

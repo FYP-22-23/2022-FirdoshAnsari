@@ -2,6 +2,7 @@ from django.db import models
 from authentication.tenant.models import Tenant
 from payments.enums import Month
 
+
 # Create your models here.
 class Bill(models.Model):
     objects = models.Manager()

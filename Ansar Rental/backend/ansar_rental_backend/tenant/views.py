@@ -11,6 +11,3 @@ class TenantViewSet(ModelViewSet):
     authentication_classes = (OwnerBackend, )
     permission_classes = ()
     authentication_backends = (OwnerBackend, )
-
-    def update(self, request, *args, **kwargs):
-        return super().update(request, *args, **kwargs, partial=True)

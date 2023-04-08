@@ -5,8 +5,11 @@ class AuthApi {
     return axios.post(`auth/owner/login/`, data);
   };
 
-  static Register = (data) => {
-    return authAxios.post(`auth/signup/`, data);
+  static Register = async (data) => {
+    const res = await authAxios.post(`auth/signup/`, data);
+    console.log(res.data)
+    if(res.status>=300) throw res.data
+    return res.data
   };
 
   static Logout = (data) => {

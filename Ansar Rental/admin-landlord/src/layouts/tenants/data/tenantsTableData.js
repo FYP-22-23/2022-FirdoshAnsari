@@ -58,7 +58,18 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
   return {
     columns: [
       { name: "tenant", align: "left" },
+      { name: "room_number", align: "center" },
+      { name: "name", align: "center" },
+      { name: "guardian", align: "center" },
+      { name: "monthly_room_rent", align: "center" },
+      { name: "monthly_water_rent", align: "center" },
       { name: "joined", align: "center" },
+      { name: "number_of_tenants", align: "center" },
+      { name: "date_of_birth", align: "center" },
+      { name: "starting_electricity_units", align: "center" },
+      { name: "contact", align: "center" },
+      { name: "address", align: "center" },
+      { name: "notes", align: "center" },
       { name: "actions", align: "center" },
     ],
 
@@ -66,9 +77,58 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
       author => {
         return {
           tenant: <Tenant name={author.username} email={author.email} />,
+          room_number: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.room_number}
+              </SuiTypography>
+          ),
+          name: <Tenant name={author.first_name} email={author.last_name} />,      //adding
+
+          guardian: <Tenant name={author.guardian_name} email={author.guardian_contact_number} />,
+
+          monthly_room_rent: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.monthly_room_rent}
+              </SuiTypography>
+          ),
+          monthly_water_rent: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.monthly_water_rent}
+              </SuiTypography>
+          ),
+          starting_electricity_units: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.starting_electricity_units}
+              </SuiTypography>
+          ),
+          number_of_tenants: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.number_of_tenants}
+              </SuiTypography>
+          ),
+          date_of_birth: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.date_of_birth}
+              </SuiTypography>
+          ),
+          contact: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.contact}
+              </SuiTypography>
+          ),
+          address: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.address}
+              </SuiTypography>
+          ),
+          notes: (
+              <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+                {author.notes}
+              </SuiTypography>
+          ),
           joined: (
             <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
-              23/04/18
+              {author.joined}
             </SuiTypography>
           ),
           actions: (
@@ -91,7 +151,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
               <Dialog
                 open={openDeleteId == author.id}
                 onClose={handleCloseDelete}
-                aria-labelledby="alert-dialog-title"
+                aria-placeholderledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
               >
                 <DialogTitle id="alert-dialog-title">
@@ -142,7 +202,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.first_name}
                         id="firstname"
-                        label="First Name"
+                        placeholder="First Name"
                         type="string"
                         fullWidth
                       />
@@ -150,7 +210,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.last_name}
                         id="lastname"
-                        label="Last Name"
+                        placeholder="Last Name"
                         type="string"
                         fullWidth
                       />
@@ -158,7 +218,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.contact}
                         id="contact"
-                        label="Contact"
+                        placeholder="Contact"
                         type="tel"
                         fullWidth
                       />
@@ -166,7 +226,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.address}
                         id="address"
-                        label="Address"
+                        placeholder="Address"
                         type="string"
                         fullWidth
                       />
@@ -174,7 +234,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.date_of_birth}
                         id="dob"
-                        label="Date of Birth"
+                        placeholder="Date of Birth"
                         type="date"
                         fullWidth
                       />
@@ -183,7 +243,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         defaultValue={author.email}
                         margin="normal"
                         id="email"
-                        label="Email Address"
+                        placeholder="Email Address"
                         type="email"
                         fullWidth
                       />
@@ -191,7 +251,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.username}
                         id="username"
-                        label="Username"
+                        placeholder="Username"
                         type="text"
                         fullWidth
                       />
@@ -199,7 +259,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.first_name}
                         id="password"
-                        label="Password"
+                        placeholder="Password"
                         type="password"
                         fullWidth
                       /> */}
@@ -207,7 +267,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.monthly_room_rent}
                         id="monthlyRoomRent"
-                        label="Monthly Room Rent"
+                        placeholder="Monthly Room Rent"
                         type="number"
                         fullWidth
                       />
@@ -215,7 +275,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.monthly_water_rent}
                         id="monthlyWaterRent"
-                        label="Monthly water Rent"
+                        placeholder="Monthly water Rent"
                         type="number"
                         fullWidth
                       />
@@ -223,7 +283,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.room_number}
                         id="roomNo"
-                        label="Room Number"
+                        placeholder="Room Number"
                         type="Number"
                         fullWidth
                       />
@@ -231,7 +291,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.guardian_name}
                         id="guardianName"
-                        label="Guardian Name"
+                        placeholder="Guardian Name"
                         type="string"
                         fullWidth
                       />
@@ -239,7 +299,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.guardian_contact_number}
                         id="guardianContactNo"
-                        label="Guardian Contact Number"
+                        placeholder="Guardian Contact Number"
                         type="tel"
                         fullWidth
                       />
@@ -247,7 +307,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.starting_electricity_units}
                         id="startingElectricityUnit"
-                        label="Starting Electricity Unit"
+                        placeholder="Starting Electricity Unit"
                         type="number"
                         fullWidth
                       />
@@ -255,7 +315,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.number_of_tenants}
                         id="noOfTenants"
-                        label="Number of Tenants"
+                        placeholder="Number of Tenants"
                         type="number"
                         fullWidth
                       />
@@ -263,7 +323,7 @@ const formatData = (data, deleteMutation, editMutation, openEditId, setOpenEditI
                         margin="normal"
                         defaultValue={author.starting_date}
                         id="startingDate"
-                        label="Starting Date"
+                        placeholder="Starting Date"
                         type="date"
                         fullWidth
                       />

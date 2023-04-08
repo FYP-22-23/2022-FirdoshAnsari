@@ -4,6 +4,7 @@ from .managers import TenantManager
 
 from datetime import datetime
 
+
 class Tenant(AbstractUser, PermissionsMixin):
     groups = models.ManyToManyField(
         'auth.Group',
@@ -38,16 +39,15 @@ class Tenant(AbstractUser, PermissionsMixin):
     photo = models.ImageField(upload_to='photos/', null=True, blank=True)
     is_tenant = models.BooleanField(default=True)
     email = models.EmailField(db_column='tenant_email', unique=True)
-    first_name= models.CharField(max_length=255)
-    last_name= models.CharField(max_length=255)
-    contact= models.PositiveIntegerField()
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    contact = models.PositiveIntegerField()
     address = models.CharField(max_length=255)
     date_of_birth = models.DateField()
-
 
     objects = TenantManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['monthly_room_rent', 'monthly_water_rent', 'room_number', 'guardian_name',
-                       'guardian_contact_number', 'starting_electricity_units', 'number_of_tenants', 'starting_date', 
+                       'guardian_contact_number', 'starting_electricity_units', 'number_of_tenants', 'starting_date',
                        'first_name', 'last_name', 'contact', 'address', 'date_of_birth']

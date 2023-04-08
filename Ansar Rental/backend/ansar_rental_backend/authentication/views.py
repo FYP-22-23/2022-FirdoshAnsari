@@ -28,7 +28,7 @@ class SignupView(CreateAPIView):
                 token = str(access.get_token_backend)
                 i1 = token.find('{')
                 i2 = token.find('}')
-                string = token[i1:i2+1].replace("'", '"')
+                string = token[i1:i2 + 1].replace("'", '"')
                 new_dict = json.loads(string)
                 user_id = new_dict['user_id']
                 auth_user = User.objects.filter(pk=user_id).first()
@@ -63,5 +63,4 @@ class SignupView(CreateAPIView):
             return Response({'detail': 'User is not authorized to access this endpoint.'},
                             status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
-            print(str(e), 'err')
-            return Response({'detail': 'Invalid or expired token.'}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({'detail': str(e)}, status=status.HTTP_401_UNAUTHORIZED)

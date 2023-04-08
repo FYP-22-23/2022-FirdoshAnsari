@@ -56,7 +56,6 @@ function SignIn() {
       }
       return setProfile(response);
     } catch (err) {
-      console.log(err);
       setButtonText("Sign in");
       if (err.response) {
         return setError(err.response.data.msg);
