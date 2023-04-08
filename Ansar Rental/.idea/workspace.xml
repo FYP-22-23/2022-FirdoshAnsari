@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="774d896f-8a9a-4a9d-83dc-348be329be5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/admin-landlord/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/src/api-context/api.context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/src/api/bill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/src/api/payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/billHistory/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/payment/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/tenant/send_mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/api/rest_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/api/rest_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/hooks/useData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/hooks/useData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/navigation/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/navigation/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/navigation/Screens.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/navigation/Screens.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/screens/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenant/src/screens/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tenant/src/screens/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/api/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/api/landlord.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/api/landlord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/assets/images/curved-images/curved1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/assets/images/home-decor-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/examples/Icons/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/examples/Icons/Basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/examples/Sidenav/SidenavCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/examples/Sidenav/SidenavCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/authentication/sign-in/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/authentication/sign-in/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/dashboard/data/gradientLineChartData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/generateBill/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/generateBill/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/landlords/data/authorsTableData.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/landlords/data/authorsTableData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/tenants/data/tenantsTableData.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/tenants/data/tenantsTableData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/layouts/tenants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/layouts/tenants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-landlord/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/admin-landlord/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/.idea/ansar_rental_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/.idea/ansar_rental_backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/ansar_rental_backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/ansar_rental_backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/tenant/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/tenant/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/tenant/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/tenant/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/authentication/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/bills/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/invoices/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/invoices/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/invoices/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/invoices/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/landlord/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/landlord/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/landlord/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/landlord/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/notifications/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/notifications/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/payments/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/tenant/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/tenant/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ansar_rental_backend/tenant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ansar_rental_backend/tenant/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2NpE5CZpm9hX3OuovtMQHYCkKKJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774d896f-8a9a-4a9d-83dc-348be329be5c" name="Changes" comment="" />
+      <created>1680352440551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680352440551</updated>
+    </task>
+    <servers />
+  </component>
+</project>
