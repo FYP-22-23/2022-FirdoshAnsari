@@ -19,9 +19,6 @@ import AuthApi from "api/auth";
 import {TenantTable} from "./data/tenantsTableData";
 import {toast} from "react-toastify";
 import InputAdornment from '@mui/material/InputAdornment';
-// import bgImage from '../../assets/images/payment.jpg';
-
-// import FormControl from '@mui/material/FormControl';
 
 function Tenants() {
     const [tableCounter, setTableCounter] = useState(0)
@@ -135,6 +132,7 @@ function Tenants() {
                             id="firstname"
                             placeholder="First Name"
                             type="string"
+                            label="First Name"
                             required
                             fullWidth
                         />
@@ -144,6 +142,7 @@ function Tenants() {
                             id="lastname"
                             placeholder="Last Name"
                             type="string"
+                            label="Last Name"
                             required
                             fullWidth
                         />
@@ -152,6 +151,7 @@ function Tenants() {
                             id="contact"
                             placeholder="Contact"
                             type="tel"
+                            label="Contact"
                             required
                             fullWidth
                         />
@@ -160,6 +160,7 @@ function Tenants() {
                             id="address"
                             placeholder="Address"
                             type="string"
+                            label="Address"
                             required
                             fullWidth
                         />
@@ -168,6 +169,7 @@ function Tenants() {
                             id="dob"
                             placeholder="Date of Birth"
                             type="date"
+                            label="Date of Birth"
                             required
                             fullWidth
                         />
@@ -177,6 +179,7 @@ function Tenants() {
                             id="email"
                             placeholder="Email Address"
                             type="email"
+                            label="Email"
                             required
                             fullWidth
                         />
@@ -185,6 +188,7 @@ function Tenants() {
                             id="username"
                             placeholder="Username"
                             type="text"
+                            label="Username"
                             required
                             fullWidth
                         />
@@ -193,6 +197,7 @@ function Tenants() {
                             id="password"
                             placeholder="Password"
                             type="password"
+                            label="password"
                             required
                             fullWidth
                         />
@@ -201,6 +206,7 @@ function Tenants() {
                             id="monthlyRoomRent"
                             placeholder="Monthly Room Rent"
                             type="number"
+                            label="Monthly Room Rent"
                             required
                             fullWidth
                             InputProps={{
@@ -213,6 +219,7 @@ function Tenants() {
                             id="monthlyWaterRent"
                             placeholder="Monthly water Rent"
                             type="number"
+                            label="Monthly Water Rent"
                             required
                             fullWidth
                             InputProps={{
@@ -224,6 +231,7 @@ function Tenants() {
                             id="roomNo"
                             placeholder="Room Number"
                             type="Number"
+                            label="Room Number"
                             required
                             fullWidth
                         />
@@ -232,6 +240,7 @@ function Tenants() {
                             id="guardianName"
                             placeholder="Guardian Name"
                             type="string"
+                            label="Guardian Name"
                             required
                             fullWidth
                         />
@@ -240,6 +249,7 @@ function Tenants() {
                             id="guardianContactNo"
                             placeholder="Guardian Contact Number"
                             type="tel"
+                            label="Guardian Contact Number"
                             fullWidth
                         />
                         <TextField
@@ -247,6 +257,7 @@ function Tenants() {
                             id="startingElectricityUnit"
                             placeholder="Starting Electricity Unit"
                             type="number"
+                            label="Starting Electricity Unit"
                             required
                             fullWidth
                         />
@@ -255,6 +266,7 @@ function Tenants() {
                             id="noOfTenants"
                             placeholder="Number of Tenants"
                             type="number"
+                            label="Number of Tenants"
                             required
                             fullWidth
                         />
@@ -264,6 +276,7 @@ function Tenants() {
                             required
                             placeholder="Starting Date"
                             type="date"
+                            label="Starting Date"
                             fullWidth
                         />
                     </form>

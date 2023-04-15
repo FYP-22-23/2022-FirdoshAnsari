@@ -8,6 +8,7 @@ const baseUrl = 'http://192.168.254.10:8000'
 const api = Axios.create({
     baseURL: baseUrl,
     headers: {"Content-Type": "application/json"},
+    validateStatus: (status) => true
 });
 
 const authApi = Axios.create({
@@ -29,14 +30,21 @@ authApi.interceptors.request.use(
 )
 
 export async function login(username, password) {
-    const res = await api.post('/auth/tenant/login/', {username, password})
-    if ('error' in res.data) {
-        throw res.data.error
+    try {
+        const res = await api.post('/auth/tenant/login/', {username, password})
+        if (res.status > 299) {
+            throw ''
+        }
+        return res.data
+    } catch (_) {
+        throw 'Incorrect username or password'
     }
-    if (!res.data.success) {
-        throw 'Something went wrong'
-    }
-    return res.data
+}
+
+export async function changePassword(old_password, new_password, confirm_password) {
+    const res = await authApi.post(`/auth/tenant/change-password/`, {old_password, new_password, confirm_password})
+    if (res.status > 299) throw res.data.error
+    return res.data.success
 }
 
 export async function setFcmToken(id, token) {
@@ -114,12 +122,12 @@ export function intToMonth(month) {
     }
 }
 
-export async function createPayment(paid_amount, due_amount, room_number, remarks, bill) {
+export async function createPayment(paid_amount, due_amount, room_number, remarks, bill, month) {
     const res = await api.post(`payment/`,
         {
             paid_amount: paid_amount,
             due_amount: due_amount,
-            month: intToMonth(new Date().getMonth()),
+            month: month,
             room_number: room_number,
             remarks: remarks,
             bill: bill,

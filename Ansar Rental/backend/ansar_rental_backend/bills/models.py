@@ -1,5 +1,7 @@
+from datetime import datetime
+
 from django.db import models
-from authentication.tenant.models import Tenant
+
 from payments.enums import Month
 
 
@@ -15,3 +17,4 @@ class Bill(models.Model):
     electricity_rate = models.PositiveIntegerField()
     remarks = models.CharField(max_length=255, default='', blank=True)
     discount = models.PositiveIntegerField(default=0)
+    created_at = models.DateField(default=datetime.now())

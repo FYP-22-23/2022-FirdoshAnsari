@@ -74,7 +74,13 @@ const billCols: GridColDef[] = [
 ];
 
 function Dashboard() {
-    const {bills, payments, tenantsForRoom} = useApi()
+    const {bills, payments, tenantsForRoom, billHistory} = useApi()
+
+    let totalTenants = 0
+    for(let i=0;i<tenantsForRoom.length;i++){
+        const t = tenantsForRoom[i]
+        totalTenants+=t.tenants
+    }
 
     function getShortPayment() {
         let arr = []
@@ -94,6 +100,15 @@ function Dashboard() {
         return arr
     }
 
+    function getShortBillHistory() {
+        let arr = []
+        for (let i = 0; i < billHistory.length; i++) {
+            if (i === 5) break;
+            arr.push(billHistory[i])
+        }
+        return arr
+    }
+
     return (
         <div style={styles}>
             <Stack direction='row' sx={{marginTop: 0}}>
@@ -106,14 +121,14 @@ function Dashboard() {
                     color: 'blue',
                     fontSize: 18
                 }}>
-                    Pending Bills
+                    {getShortBills().length === 0 ? 'Bill History' : 'Bills'}
                     <DataGrid style={{marginTop: '5px', fontSize: 12}}
                               componentsProps={{
                                   pagination: {
                                       hidden: true,
                                   }
                               }}
-                              rows={getShortBills()}
+                              rows={getShortBills().length === 0 ? getShortBillHistory() : getShortBills()}
                               columns={billCols}
                               pageSize={5}
                               rowsPerPageOptions={[5]}
@@ -148,7 +163,7 @@ function Dashboard() {
                         data: tenantsForRoom.map((r) => r.tenants),
                     }]} type="bar" width={500} height={300}/>
                     <h4 style={{color: 'green', fontSize: 16, marginTop: -17}}>
-                        {`No. of tenants: ${tenantsForRoom.reduce((p, n) => p.tenants + n.tenants)}`}
+                        {`No. of tenants: ${totalTenants}`}
                     </h4>
                 </Stack>
             </Stack>

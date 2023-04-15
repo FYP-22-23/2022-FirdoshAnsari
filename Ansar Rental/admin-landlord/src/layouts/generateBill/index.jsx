@@ -3,6 +3,8 @@ import {LandlordApi} from 'api/landlord'
 import React, {useState} from 'react'
 import {useMutation, useQuery} from 'react-query'
 import {toast} from 'react-toastify'
+import bgImage from '../../assets/images/g.jpg';
+
 
 export default function GenerateBill() {
     const generateBillMutation = useMutation((data) => LandlordApi.generateBill(data),
@@ -10,6 +12,7 @@ export default function GenerateBill() {
             onSuccess: () => toast('Bill sent', {type: 'success'}),
             onError: (e) => toast(`Something went wrong. ${e}`, {type: 'error'}),
         },
+       
     )
     const [roomNumber, setRoomNumber] = useState(null)
     const [month, setMonth] = useState('BAISAKH')
@@ -55,19 +58,28 @@ export default function GenerateBill() {
         }
         generateBillMutation.mutate(data)
     }
+    const styles = {
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100vh',
+    };
 
     return (
-        <div>
+        <div style={styles}>
             <Backdrop open={roomNumberQuery.isLoading || generateBillMutation.isLoading} onClick={() => {
             }}/>
             {
                 roomNumberQuery.isSuccess && !generateBillMutation.isLoading &&
                 <form onSubmit={onAdd} id="generate-bill-form">
                     <Box sx={{paddingX: 50}}>
-                        <Typography variant='h2'sx={{margin: '20px'}}>Generate Bill</Typography>
+                        <Typography variant='h2' sx={{margin: '20px'}}>Generate Bill</Typography>
                         <>
+                            <FormControl fullWidth>
+                            </FormControl>
                             <FormControl fullWidth sx={{my: 1}}>
-                                <InputLabel id="month-label">Room Number</InputLabel>
+                                <InputLabel>Room Number</InputLabel>
                                 <Select
                                     labelId="room-number-label"
                                     label="Room number"
@@ -77,7 +89,6 @@ export default function GenerateBill() {
                                     // label="Room Number"
                                     placeholder='Room Number'
                                     InputLabelProps={{shrink: true}}
-
                                     onChange={(f) => {
                                         f.preventDefault();
                                         setRoomNumber(f.target.value)
@@ -85,14 +96,16 @@ export default function GenerateBill() {
                                 >
                                     {
                                         roomNumberQuery.data.data.map((r) => (
-                                            <MenuItem key={r} value={r}>{r}</MenuItem>))
+                                            <MenuItem key={`${r}_key`} value={r}>{r}</MenuItem>))
                                     }
                                 </Select>
                             </FormControl>
                             <FormControl fullWidth sx={{my: 1}}>
-                                <InputLabel id="month-label">Month</InputLabel>
+                                <InputLabel>Month</InputLabel>
                                 <Select
+                                    margin= "dense"
                                     labelId="month-label"
+                                    label="Month"
                                     id="month"
                                     value={month}
                                     // label="Month"
@@ -105,7 +118,7 @@ export default function GenerateBill() {
                                 >
                                     <MenuItem key={'Baisakh'} value='BAISAKH'>Baisakh</MenuItem>
                                     <MenuItem key={'Jestha'} value='JESTHA'>Jestha</MenuItem>
-                                    <MenuItem key={'Ashar'} value='AHAR'>Ashad</MenuItem>
+                                    <MenuItem key={'Ashar'} value='ASHAR'>Ashad</MenuItem>
                                     <MenuItem key={'Shrawan'} value='SWRAWAN'>Shrawan</MenuItem>
                                     <MenuItem key={'bhadra'} value='BHADRA'>Bhadra</MenuItem>
                                     <MenuItem key={'Ashwin'} value='ASHWIN'>Ashwin</MenuItem>
@@ -123,6 +136,7 @@ export default function GenerateBill() {
                                 margin="dense"
                                 id="present_electricity_unit"
                                 type="number"
+                                label='Present Electricity Unit'
                                 fullWidth
                                 variant="outlined"
                                 placeholder='Present Electricity Unit'
@@ -136,6 +150,7 @@ export default function GenerateBill() {
                                 type="number"
                                 fullWidth
                                 variant="outlined"
+                                label='Previous Electricity Unit'
                                 placeholder='Previous Electricity Unit'
                                 // helperText= "Prevous Electricity Unit"
                                 InputLabelProps={{shrink: true}}
@@ -147,7 +162,7 @@ export default function GenerateBill() {
                                 type="number"
                                 fullWidth
                                 variant="outlined"
-                                // helperText= "Remarks"
+                                label="Due Amount"
                                 InputLabelProps={{shrink: true}}
                             />
                             <TextField
@@ -159,7 +174,7 @@ export default function GenerateBill() {
                                 type="number"
                                 fullWidth
                                 variant="outlined"
-                                // helperText= "Remarks"
+                                label="Electricity Rate"
                                 InputLabelProps={{shrink: true}}
                             />
                             <TextField
@@ -170,7 +185,7 @@ export default function GenerateBill() {
                                 type="number"
                                 fullWidth
                                 variant="outlined"
-                                // helperText= "Remarks"
+                                label="Discount"
                                 InputLabelProps={{shrink: true}}
                             />
                             <TextField
@@ -181,13 +196,13 @@ export default function GenerateBill() {
                                 type="text"
                                 fullWidth
                                 variant="outlined"
-                                // helperText= "Remarks"
+                                label="Remarks"
                                 InputLabelProps={{shrink: true}}
                             />
                         </>
                         <center>
-                            <Button type="submit" form="generate-bill-form" variant="contained">
-                                <Typography variant='caption' sx={{color: 'black'}}>Add</Typography>
+                            <Button type="submit" form="generate-bill-form" sx={{m: 4, px: 4, py: 1}} variant="contained">
+                                <Typography variant='caption' sx={{color: 'black', fontSize: 16}}>Send Bill </Typography>
                             </Button>
                         </center>
                     </Box>

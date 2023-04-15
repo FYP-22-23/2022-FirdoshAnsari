@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Soft UI Dashboard React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -24,28 +9,16 @@ import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Custom styles for the Baise
 import styles from "layouts/authentication/components/CoverLayout/styles";
-
-// Soft UI Dashboard React page layout routes
-import routes from "routes";
 
 function CoverLayout({ color, header, title, description, image, top, children }) {
   const classes = styles({ image });
 
   return (
     <PageLayout background="white">
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: "https://appseed.us/product/django-react-soft-dashboard",
-          color: "dark",
-        }}
-      />
       <Grid container justifyContent="center" className={classes.coverLayout}>
         <Grid item xs={11} sm={8} md={5} xl={3}>
           <SuiBox mt={top}>

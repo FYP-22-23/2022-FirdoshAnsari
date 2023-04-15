@@ -44,6 +44,6 @@ export default {
 
     paperAnchorDockedLeft: {
       borderRight: "none",
-    },
-  },
-};
+    }
+  }
+}

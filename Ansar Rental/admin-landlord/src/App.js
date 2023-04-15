@@ -6,12 +6,7 @@ import {Redirect, Route, Switch, useLocation} from "react-router-dom";
 // @mui material components
 import {StyledEngineProvider, ThemeProvider} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-// import Icon from "@mui/material/Icon";
-// Soft UI Dashboard PRO React components
-// import SuiBox from "components/SuiBox";
-// Soft UI Dashboard PRO React example components
 import Sidenav from "examples/Sidenav";
-import Configurator from "examples/Configurator";
 
 // Soft UI Dashboard PRO React themes
 import theme from "assets/theme";
@@ -65,53 +60,27 @@ export default function App() {
         })
     };
 
-    // const configsButton = (
-    //   <SuiBox
-    //     display="flex"
-    //     justifyContent="center"
-    //     alignItems="center"
-    //     width="3.5rem"
-    //     height="3.5rem"
-    //     backgroundColor="white"
-    //     boxShadow="sm"
-    //     borderRadius="50%"
-    //     position="fixed"
-    //     right="2rem"
-    //     bottom="2rem"
-    //     zIndex={99}
-    //     customClass="cursor-pointer"
-    //     onClick={handleConfiguratorOpen}
-    //   >
-    //     <Icon className=" text-dark" fontSize="default">
-    //       settings
-    //     </Icon>
-    //   </SuiBox>
-    // );
-
     const {user} = useAuth()
     const isAdmin = user === null ? false : user.is_admin
 
     return (
-        <>
+        <div>
             <ToastContainer/>
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={theme}>
                     <CssBaseline/>
-                    {layout === "dashboard" && (
+                    {user !== null && (
                         <>
                             <Sidenav routes={routes(isAdmin)}/>
-                            <Configurator/>
-                            {/* {configsButton} */}
                         </>
                     )}
-                    {layout === "vr" && <Configurator/>}
                     <Switch>
                         {getRoutes(routes(isAdmin))}
-                        <Redirect from="*" to="/dashboard"/>
+                        <Redirect from="*" to={isAdmin ? "/landlords" : "/dashboard"}/>
                     </Switch>
                 </ThemeProvider>
             </StyledEngineProvider>
-        </>
+        </div>
     )
 
 }

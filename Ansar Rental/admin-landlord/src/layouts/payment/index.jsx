@@ -24,11 +24,12 @@ import bgImage from '../../assets/images/payment.jpg';
 import {useApi} from "../../api-context/api.context";
 
 export const Payment = () => {
-    const {bills: payments} = useApi()
+    const {payments, bills} = useApi()
     const deleteMutation = useMutation((id) => PaymentApi.delete(id),
         {
             onSuccess: () => {
                 setIdToDelete(null)
+                window.location.reload()
                 // query.refetch()
             },
             onError: (error) => toast(error, {type: "error"})
@@ -47,10 +48,10 @@ export const Payment = () => {
 
     const columns: GridColDef[] = [
         // {field: 'billId', headerName: 'Bill Id', width: 90},
-        {field: 'room_number', headerName: 'Room No.', width: 90, type: "number", editable: true},
+        {field: 'room_number', headerName: 'Room No.', width: 100, type: "number", editable: true},
         {field: 'paid_amount', headerName: 'Paid amount', width: 130, type: "number", editable: true},
-        {field: 'due_amount', headerName: 'Due amount', width: 130, type: "number", editable: true},
-        {field: 'month', headerName: 'Month', width: 90, editable: true},
+        {field: 'due_amount', headerName: 'Due amount', width: 150, type: "number", editable: true, align: 'center'},
+        {field: 'month', headerName: 'Month', width: 140, editable: true},
         {field: 'created_at', headerName: "Paid on", width: 160},
         {field: 'remarks', headerName: "Remarks", width: 350, editable: true},
         {
@@ -89,6 +90,8 @@ export const Payment = () => {
         {
             onSuccess: data => {
                 toast(data.toString(), {type: "success"})
+                setShowAddDialog(false)
+                window.location.reload()
                 // query.refetch()
             },
             onError: error => toast(error.toString(), {type: "error"}),
@@ -139,7 +142,13 @@ export const Payment = () => {
                       }}
             />
         </div>
-        <Button onClick={() => setShowAddDialog(true)} sx={{backgroundColor: 'gray', marginX: "40%", marginY: 7}}>
+        <Button onClick={() => {
+            if(bills.length===0){
+                toast('There is no pending bill, so you cannot add new payment.', {type: 'info'})
+                return
+            }
+            setShowAddDialog(true)
+        }} sx={{backgroundColor: 'gray', marginX: "40%", marginY: 7}}>
             Add Payment
         </Button>
         <Dialog open={idToDelete !== null} onClose={() => setIdToDelete(false)}>
@@ -185,7 +194,7 @@ export const Payment = () => {
                         </Select>
                     </FormControl>
                     <FormControl fullWidth sx={{my: 1}}>
-                        <InputLabel id="month-label">Bill ID</InputLabel>
+                        <InputLabel id="bill-id-label">Bill ID</InputLabel>
                         <Select
                             labelId="bill-id-label"
                             label="Bill ID"
@@ -202,7 +211,7 @@ export const Payment = () => {
                             }}
                         >
                             {
-                                payments.map((r) => (
+                                bills.map((r) => (
                                     <MenuItem key={r.id} value={r.id}>{r.id}</MenuItem>
                                 ))
                             }
@@ -214,8 +223,7 @@ export const Payment = () => {
                             labelId="month-label"
                             id="month"
                             value={month}
-                            // label="Month"
-                            placeholder="Month"
+                            label="Month"
                             InputLabelProps={{shrink: true}}
                             onChange={(f) => {
                                 f.preventDefault();
@@ -245,6 +253,7 @@ export const Payment = () => {
                         fullWidth
                         variant="outlined"
                         placeholder='Paid Amount'
+                        label='Paid Amount'
                         // helperText='Present Electricity Unit'
                         InputLabelProps={{shrink: true}}
                     />
@@ -252,6 +261,7 @@ export const Payment = () => {
                         margin="dense"
                         id="due_amount"
                         placeholder='Due Amount'
+                        label='Due Amount'
                         type="number"
                         fullWidth
                         variant="outlined"
@@ -262,6 +272,7 @@ export const Payment = () => {
                         margin="dense"
                         id="discount"
                         placeholder="Discount (in Rs.)"
+                        label="Discount (in Rs.)"
                         type="number"
                         fullWidth
                         variant="outlined"
@@ -272,6 +283,7 @@ export const Payment = () => {
                         margin="dense"
                         id="remarks"
                         placeholder="Remarks"
+                        label="Remarks"
                         type="text"
                         fullWidth
                         variant="outlined"

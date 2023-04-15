@@ -14,6 +14,8 @@ const Bills = () => {
     const toast = useToast();
     const {user} = useData()
 
+    if (user === null) return null
+
     const query = useQuery(['key'], {
         queryFn: () => {
             return getPendingBills(parseInt(user.user.room_no));
@@ -28,8 +30,8 @@ const Bills = () => {
         if (query.isSuccess) setPendingBills(query.data)
     }, [query.isSuccess]);
 
-    const createPaymentMutation = useMutation(({paid_amount, due_amount, room_number, remarks, bill}) => {
-        return createPayment(paid_amount, due_amount, room_number, remarks, bill)
+    const createPaymentMutation = useMutation(({paid_amount, due_amount, room_number, remarks, bill, month}) => {
+        return createPayment(paid_amount, due_amount, room_number, remarks, bill, month)
     }, {
         onError: (e) => {
             toast.hideAll();
@@ -81,8 +83,9 @@ const Bills = () => {
                                     paid_amount: b.total,
                                     due_amount: 0,
                                     room_number: parseInt(user.user.room_no),
-                                    remarks: '',
-                                    bill: b.id
+                                    remarks: 'Paid online',
+                                    bill: b.id,
+                                    month: b.month,
                                 }
                                 createPaymentMutation.mutate(data)
                             }} // Callback from Khalti Web Sdk

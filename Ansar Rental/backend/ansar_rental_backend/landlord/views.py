@@ -9,6 +9,8 @@ from .serializers import OwnerSerializer
 
 class LandlordViewSet(ModelViewSet):
     queryset = Owner.objects.all()
+    authentication_classes = ()
+    permission_classes = ()
     serializer_class = OwnerSerializer
 
 

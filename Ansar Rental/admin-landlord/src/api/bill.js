@@ -2,7 +2,7 @@ import api from "./index";
 
 export class BillApi {
     static async getPendingBills() {
-        const res = await api.get(`bill/`);
+        const res = await api.get(`bill/get_all_pending_bills/`);
         if (res.status >= 300) {
             throw 'Something went wrong'
         }

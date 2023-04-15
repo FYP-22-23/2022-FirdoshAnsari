@@ -21,6 +21,8 @@ class TenantTokenObtainPairSerializer(TokenObtainPairSerializer):
             'room_no': user.room_number,
             'is_tenant': user.is_tenant,
             'monthly_room_rent': user.monthly_room_rent,
+            'phone_number': user.contact,
+            'name': user.first_name,
             'fcm_token': user.fcm_token,
         }
         data['token'] = data.pop('access')

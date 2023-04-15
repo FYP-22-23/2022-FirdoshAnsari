@@ -2,7 +2,7 @@ import { authAxios, axios } from "./index";
 
 export class LandlordApi {
   static getAll() {
-    return authAxios.get(`landlord/`);
+    return axios.get(`landlord/`);
   }
 
   static getTenantsForRoom() {

@@ -17,6 +17,7 @@ import SuiButton from "components/SuiButton";
 import React, { useRef, useState } from "react";
 import AuthApi from "api/auth";
 import { AuthorTable } from "./data/authorsTableData";
+import {toast} from "react-toastify";
 
 function Landlords() {
   const [tableCounter, setTableCounter] = useState(0)
@@ -34,15 +35,19 @@ function Landlords() {
   };
 
   const handleCreateUser = async (formData) => {
-    formData.preventDefault()
-    const email = formData.target.elements.email.value
-    const username = formData.target.elements.username.value
-    const password = formData.target.elements.password.value
-    await AuthApi.Register({ username, password, email })
-    const newCount = tableCounter + 1
-    tableKey.current = `get_all_${newCount}_key`
-    setTableCounter(newCount)
-    handleCloseAddDialog()
+    try{
+      formData.preventDefault()
+      const email = formData.target.elements.email.value
+      const username = formData.target.elements.username.value
+      const password = formData.target.elements.password.value
+      await AuthApi.Register({ username, password, email })
+      const newCount = tableCounter + 1
+      tableKey.current = `get_all_${newCount}_key`
+      setTableCounter(newCount)
+      handleCloseAddDialog()
+    }catch(e){
+      toast('Something went wrong', {type: 'error'})
+    }
   }
 
   return (

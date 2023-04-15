@@ -8,7 +8,7 @@ from .serializers import BillSerializer
 
 
 class BillViewSet(viewsets.ModelViewSet):
-    queryset = Bill.objects.all()
+    queryset = Bill.objects.all().order_by('created_at')
     serializer_class = BillSerializer
     authentication_classes = ()
     permission_classes = ()

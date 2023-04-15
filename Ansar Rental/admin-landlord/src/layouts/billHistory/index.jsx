@@ -48,13 +48,14 @@ const columns: GridColDef[] = [
     {
         field: 'monthly_room_rent',
         headerName: "Monthly room rent",
-        width: 150,
+        width: 130,
         type: "number",
         align: "center",
         editable: true
     },
-    {field: 'total', headerName: "Total", width: 110, type: "number", align: "center"},
-    {field: 'remarks', headerName: "Remarks", width: 110, align: "center"},
+    {field: 'total', headerName: "Total", width: 90, type: "number", align: "center"},
+    {field: 'remarks', headerName: "Remarks", width: 120, align: "center", headerAlign: "center"},
+    {field: 'status', headerName: "Status", width: 110, align: "center"},
 ];
 
 const styles = {

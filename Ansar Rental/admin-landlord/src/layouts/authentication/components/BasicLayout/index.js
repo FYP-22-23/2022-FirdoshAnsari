@@ -9,7 +9,6 @@ import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Custom styles for the BaiseLayout
@@ -23,15 +22,6 @@ function BasicLayout({ title, description, image, children }) {
 
   return (
     <PageLayout>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: "https://appseed.us/product/django-react-soft-dashboard",
-        }}
-        transparent
-        light
-      />
       <SuiBox customClass={classes.basicLayout}>
         <Grid container spacing={3} justifyContent="center" className="text-center">
           <Grid item xs={10} lg={4}>
