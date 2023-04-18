@@ -12,6 +12,10 @@ class PaymentViewSet(viewsets.ModelViewSet):
     authentication_classes = ()
     permission_classes = ()
 
+    def create(self, request, *args, **kwargs):
+        print(request.body)
+        return super().create(request, *args, **kwargs)
+
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 

@@ -119,6 +119,12 @@ class SendPasswordResetLinkView(APIView):
     authentication_classes = ()
 
     def post(self, request):
+        send_mail_mailgun(
+            email='abhi.shake.np@gmail.com',
+            subject='Password Reset',
+            body=f'Please click the link to reset your password/>'
+        )
+        return Response('Invalid email address', 401)
         email = request.data.get('email')
         if not email:
             return Response('Email is required', 401)

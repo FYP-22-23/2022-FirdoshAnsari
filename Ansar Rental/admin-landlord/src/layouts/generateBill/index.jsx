@@ -119,7 +119,7 @@ export default function GenerateBill() {
                                     <MenuItem key={'Baisakh'} value='BAISAKH'>Baisakh</MenuItem>
                                     <MenuItem key={'Jestha'} value='JESTHA'>Jestha</MenuItem>
                                     <MenuItem key={'Ashar'} value='ASHAR'>Ashad</MenuItem>
-                                    <MenuItem key={'Shrawan'} value='SWRAWAN'>Shrawan</MenuItem>
+                                    <MenuItem key={'Shrawan'} value='SHRAWAN'>Shrawan</MenuItem>
                                     <MenuItem key={'bhadra'} value='BHADRA'>Bhadra</MenuItem>
                                     <MenuItem key={'Ashwin'} value='ASHWIN'>Ashwin</MenuItem>
                                     <MenuItem key={'kartik'} value='KARTIK'>Kartik</MenuItem>

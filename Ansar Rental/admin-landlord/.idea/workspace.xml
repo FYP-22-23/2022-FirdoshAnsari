@@ -5,87 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93de3cf9-8b4b-4261-8716-2f9309737e46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Tenant/src/api/rest_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Tenant/src/api/rest_client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tenant/src/screens/Bills.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Tenant/src/screens/Bills.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tenant/src/screens/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Tenant/src/screens/Payment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tenant/src/screens/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Tenant/src/screens/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tenant/src/screens/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Tenant/src/screens/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProtectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/bill.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/bill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/landlord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/landlord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/theme/components/sidenav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme/components/sidenav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiBox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiBox/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiBox/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiButton/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiButton/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiInput/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiInput/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiInput/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiTypography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiTypography/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuiTypography/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuiTypography/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/HorizontalBarChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/HorizontalBarChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/ReportsBarChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/ReportsBarChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/VerticalBarChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BarCharts/VerticalBarChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BubbleChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/BubbleChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/DoughnutCharts/DefaultDoughnutChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/DoughnutCharts/DefaultDoughnutChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/LineCharts/DefaultLineChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/LineCharts/DefaultLineChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/LineCharts/GradientLineChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/LineCharts/GradientLineChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/MixedChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/MixedChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/PieChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/PieChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/PolarChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/PolarChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/RadarChart/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Charts/RadarChart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Configurator/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Configurator/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Navbars/DefaultNavbar/DefaultNavbarLink.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Navbars/DefaultNavbar/DefaultNavbarMobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Navbars/DefaultNavbar/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Navbars/DefaultNavbar/styles/defaultNavbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/NotificationItem/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/NotificationItem/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Timeline/TimelineItem/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Timeline/TimelineItem/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Timeline/TimelineList/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/Timeline/context/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/BasicLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/BasicLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/CoverLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/CoverLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/sign-in/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/sign-in/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/billHistory/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/billHistory/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Breadcrumbs/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Breadcrumbs/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/BlogCards/DefaultBlogCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/BlogCards/DefaultBlogCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/BlogCards/TransparentBlogCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/BlogCards/TransparentBlogCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/BlogCards/TransparentBlogCard/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/BlogCards/TransparentBlogCard/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/CounterCards/OutlinedCounterCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/CounterCards/OutlinedCounterCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/InfoCards/DefaultInfoCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/InfoCards/DefaultInfoCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/InfoCards/ProfileInfoCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/InfoCards/ProfileInfoCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/MasterCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/MasterCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/MasterCard/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/MasterCard/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/PlaceholderCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/PlaceholderCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/PlaceholderCard/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/PlaceholderCard/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/PricingCards/DefaultPricingCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/PricingCards/DefaultPricingCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/ProjectCards/DefaultProjectCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/ProjectCards/DefaultProjectCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/ProjectCards/DefaultProjectCard/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/ProjectCards/DefaultProjectCard/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Cards/StatisticsCards/MiniStatisticsCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Cards/StatisticsCards/MiniStatisticsCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/CreditCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/CreditCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/Cube.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/Cube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/CustomerSupport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/CustomerSupport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/Document.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/Document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/Office.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/Office.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Icons/SpaceShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Icons/SpaceShip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/LayoutContainers/DashboardLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/LayoutContainers/DashboardLayout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/LayoutContainers/DashboardLayout/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/LayoutContainers/DashboardLayout/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/LayoutContainers/PageLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/LayoutContainers/PageLayout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Navbars/DashboardNavbar/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Navbars/DashboardNavbar/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/ProfilesList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/ProfilesList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Sidenav/SidenavCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Sidenav/SidenavCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Sidenav/SidenavCollapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Sidenav/SidenavCollapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenavCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenavCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenavCollapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Sidenav/styles/sidenavCollapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/Table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/Table/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/BasicLayout/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/BasicLayout/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/CoverLayout/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/CoverLayout/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/Separator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/Separator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/components/Socials/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/components/Socials/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/authentication/sign-out/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/authentication/sign-out/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/generateBill/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/generateBill/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/landlords/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/landlords/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/landlords/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/landlords/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/payment/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/payment/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/tenants/data/tenantsTableData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/tenants/data/tenantsTableData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/tenants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/tenants/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/owner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/owner/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/owner/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/owner/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/tenant/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/tenant/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/tenant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/tenant/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/profile/components/Header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/profile/components/Header/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/authentication/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/bills/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/ansar_rental_backend/payments/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +138,7 @@
       <workItem from="1680955054305" duration="7863000" />
       <workItem from="1681112282960" duration="8241000" />
       <workItem from="1681381330696" duration="19635000" />
+      <workItem from="1681783986939" duration="1965000" />
     </task>
     <servers />
   </component>

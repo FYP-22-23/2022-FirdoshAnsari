@@ -50,8 +50,9 @@ export const Payment = () => {
         // {field: 'billId', headerName: 'Bill Id', width: 90},
         {field: 'room_number', headerName: 'Room No.', width: 100, type: "number", editable: true},
         {field: 'paid_amount', headerName: 'Paid amount', width: 130, type: "number", editable: true},
-        {field: 'due_amount', headerName: 'Due amount', width: 150, type: "number", editable: true, align: 'center'},
-        {field: 'month', headerName: 'Month', width: 140, editable: true},
+        {field: 'due_amount', headerName: 'Due amount', width: 100, type: "number", editable: true, align: 'center'},
+        {field: 'discount', headerName: 'Discount', width: 100, type: "number", editable: true},
+        {field: 'month', headerName: 'Month', width: 130, editable: true},
         {field: 'created_at', headerName: "Paid on", width: 160},
         {field: 'remarks', headerName: "Remarks", width: 350, editable: true},
         {
@@ -115,6 +116,7 @@ export const Payment = () => {
         const elements = form.target.elements
         const paid_amount = parseInt(elements.paid_amount.value || '0')
         const due_amount = parseInt(elements.due_amount.value || '0')
+        const discount = parseInt(elements.discount.value || '0')
         const remarks = elements.remarks.value
 
         let data = {
@@ -122,6 +124,7 @@ export const Payment = () => {
             month,
             paid_amount,
             due_amount,
+            discount,
             remarks,
             bill: billId,
         }
@@ -233,7 +236,7 @@ export const Payment = () => {
                             <MenuItem key={'Baisakh'} value='BAISAKH'>Baisakh</MenuItem>
                             <MenuItem key={'Jestha'} value='JESTHA'>Jestha</MenuItem>
                             <MenuItem key={'Ashar'} value='AHAR'>Ashad</MenuItem>
-                            <MenuItem key={'Shrawan'} value='SWRAWAN'>Shrawan</MenuItem>
+                            <MenuItem key={'Shrawan'} value='SHRAWAN'>Shrawan</MenuItem>
                             <MenuItem key={'bhadra'} value='BHADRA'>Bhadra</MenuItem>
                             <MenuItem key={'Ashwin'} value='ASHWIN'>Ashwin</MenuItem>
                             <MenuItem key={'kartik'} value='KARTIK'>Kartik</MenuItem>

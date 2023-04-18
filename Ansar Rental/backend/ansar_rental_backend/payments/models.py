@@ -9,6 +9,7 @@ class Payment(models.Model):
     objects = models.Manager()
 
     room_number = models.PositiveIntegerField()
+    discount = models.PositiveIntegerField(default=0)
 
     paid_amount = models.PositiveIntegerField()
     due_amount = models.PositiveIntegerField(default=0)
